@@ -1,0 +1,22 @@
+---
+- name: Lab 01 install git and clone repo
+  shell: git init && git clone https://github.com/pujamudaliar/DockerDemo.git
+  register: result
+
+
+- name: Change directory to examples/nginx  
+  shell: cd DockerDemo/examples/nginx   
+
+
+- name: run docker image
+  shell: docker run -d --name testtt-ngiinnx -p 97:97 -v $(pwd):/usr/share/nginx/html:ro nginx:latest
+  register: result
+
+- name: Output
+  local_action: 
+    module: copy 
+    content: "{{ result.stdout }}"
+    dest: /etc/ansible/Assignment/log_file_02.txt
+
+# - name: Remove DockerDemo
+#   shell: rm -rf DockerDemo/

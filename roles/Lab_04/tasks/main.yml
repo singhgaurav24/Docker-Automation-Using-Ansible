@@ -1,0 +1,3 @@
+---
+- include: lab_04.yml
+# tasks file for /etc/ansible/Assignment/roles/Lab_04

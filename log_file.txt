@@ -1,0 +1,24 @@
+Docker version 20.10.6, build 370c289 Hello world aa773c72281d08e8b1ffc2205df412697e37baf264eda4bf0390c0c9d5c668fb CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                      PORTS                                       NAMES
+aa773c72281d   ubuntu             "/bin/bash"              9 seconds ago    Up Less than a second                                                   practical_kare
+869d6b8c9cce   ubuntu             "/bin/echo 'Hello wo…"   20 seconds ago   Exited (0) 12 seconds ago                                               lucid_morse
+10f32b985e37   nginx:latest       "/docker-entrypoint.…"   8 hours ago      Up 8 hours                  80/tcp, 0.0.0.0:85->85/tcp, :::85->85/tcp   test-ngiinx
+b47f73263369   ubuntu             "/bin/bash"              8 hours ago      Up 8 hours                                                              zen_bassi
+b22dc2dc01d8   ubuntu             "/bin/echo 'Hello wo…"   8 hours ago      Exited (0) 8 hours ago                                                  competent_moser
+4cc42ac50ac8   app-test_app       "python /app.py"         27 hours ago     Up 8 hours                  0.0.0.0:5000->5000/tcp, :::5000->5000/tcp   app-test_app_1
+a96e5e60094c   redis:3.2-alpine   "docker-entrypoint.s…"   27 hours ago     Up 8 hours                  6379/tcp                                    app-test_redis_1
+b34ccc43b49d   nginx:latest       "/docker-entrypoint.…"   27 hours ago     Exited (255) 24 hours ago   80/tcp, 0.0.0.0:84->84/tcp, :::84->84/tcp   teest-ngiinx
+df37b7655582   ubuntu             "/bin/echo 'Hello wo…"   27 hours ago     Exited (0) 27 hours ago                                                 stoic_saha
+074861d22fe4   nginx:latest       "/docker-entrypoint.…"   28 hours ago     Exited (255) 24 hours ago   0.0.0.0:73->73/tcp, :::73->73/tcp, 80/tcp   test-ngginx
+fb7d4fa9563f   ubuntu             "/bin/echo 'Hello wo…"   28 hours ago     Exited (0) 28 hours ago                                                 compassionate_blackwell
+8e9a20d7f774   ubuntu             "/bin/echo 'Hello wo…"   28 hours ago     Exited (0) 28 hours ago                                                 elegant_northcutt
+ea742facd357   ubuntu             "/bin/echo 'Hello wo…"   28 hours ago     Exited (0) 28 hours ago                                                 determined_wescoff
+9e0a93e2ec61   ubuntu             "/bin/echo 'Hello wo…"   28 hours ago     Exited (0) 28 hours ago                                                 angry_keller
+112456f8f0b1   ubuntu             "/bin/echo 'Hello wo…"   28 hours ago     Exited (0) 28 hours ago                                                 jovial_rhodes
+38a1913df5e7   nginx:latest       "/docker-entrypoint.…"   28 hours ago     Exited (0) 28 hours ago                                                 test-nngginx
+4982e3d8cb53   ubuntu             "/bin/echo 'Hello wo…"   28 hours ago     Exited (0) 28 hours ago                                                 practical_hodgkin
+3d667667590c   ubuntu             "/bin/echo 'Hello wo…"   31 hours ago     Exited (0) 31 hours ago                                                 funny_williamson
+83a2adc8b78a   nginx:latest       "/docker-entrypoint.…"   31 hours ago     Exited (255) 24 hours ago   80/tcp, 0.0.0.0:92->92/tcp, :::92->92/tcp   tessst-nginxxx
+4674cc245bcd   nginx:latest       "/docker-entrypoint.…"   31 hours ago     Exited (0) 24 hours ago     80/tcp, 0.0.0.0:91->91/tcp, :::91->91/tcp   tessst-nginxx
+8d15b2b166cb   nginx:latest       "/docker-entrypoint.…"   31 hours ago     Exited (0) 31 hours ago                                                 test-nginxxx
+a5771bb4f3e0   nginx:latest       "/docker-entrypoint.…"   31 hours ago     Exited (255) 24 hours ago   80/tcp, 0.0.0.0:89->89/tcp, :::89->89/tcp   test-nginxx
+95d64d44b12f   nginx:latest       "/docker-entrypoint.…"   31 hours ago     Exited (0) 31 hours ago                                                 test-nginx

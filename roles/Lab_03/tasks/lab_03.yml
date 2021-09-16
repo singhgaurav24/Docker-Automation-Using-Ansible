@@ -1,0 +1,25 @@
+---
+- name: Lab 03 Go to curl directory
+  shell: cd DockerDemo/examples/curl 
+         && pwd && docker build . -t test-curl
+  register: result_01
+
+  
+  
+- name: Build an Image
+  shell: cd DockerDemo/examples/curl 
+         &&  docker run --rm -e SITE_URL=www.google.com -v $(pwd)/vol:/data/:rw test-curl 
+         && cat ./vol/results
+  register: result_02
+
+- name: check running images
+  shell: docker ps
+  register: result_03
+
+
+
+- name: Output
+  local_action: 
+    module: copy 
+    content: "{{ result_01.stdout }} {{ result_02.stdout }} {{ result_03.stdout }}"
+    dest: /etc/ansible/Assignment/log_file_03.txt

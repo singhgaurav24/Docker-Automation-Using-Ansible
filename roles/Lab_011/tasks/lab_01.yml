@@ -1,0 +1,41 @@
+---
+- name: ensure repository key is installed
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: ensure docker registry is available
+  apt_repository: 
+    repo: 'deb https://download.docker.com/linux/ubuntu bionic stable' 
+    state: present
+
+- name: ensure docker and dependencies are installed
+  apt: 
+    name: docker-ce 
+    update_cache: yes
+
+- name: Check Docker version
+  shell: docker --version
+  register: result
+
+- name: Hello World image
+  shell: docker run ubuntu /bin/echo 'Hello world'
+  register: result_01
+
+- name: bash result
+  shell: docker run -i -t -d --rm ubuntu /bin/bash
+  register: result_02
+
+- name: Chcker all containers
+  shell: docker ps -a
+  register: result_03
+
+- name: Output
+  local_action: 
+    module: copy 
+    content: "{{ result.stdout }} {{ result_01.stdout }} {{ result_02.stdout }} {{ result_03.stdout }}"
+    dest: /etc/ansible/Assignment/log_file.txt
+
+- name: debug
+  debug: 
+    var: result_01

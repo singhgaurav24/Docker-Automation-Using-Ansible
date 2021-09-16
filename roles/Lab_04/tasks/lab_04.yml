@@ -1,0 +1,27 @@
+---
+- name: install docker-compose
+  shell: sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+         && sudo chmod +x /usr/local/bin/docker-compose
+         && docker-compose --version
+  register: result
+
+
+- name: Lab 03 - Go to compose directory and docker-compose
+  shell: cd DockerDemo/examples/compose 
+         && pwd 
+         && docker-compose --project-name app-test -f docker-compose.yml up -d
+  register: result_01
+
+  
+  
+- name: To see volumes run
+  shell: docker volume ls
+  register: result_02
+
+
+
+- name: Output
+  local_action: 
+    module: copy 
+    content: "{{ result.stdout }} {{ result_01.stdout }} {{ result_02.stdout  }} "
+    dest: /etc/ansible/Assignment/log_file_04.txt
