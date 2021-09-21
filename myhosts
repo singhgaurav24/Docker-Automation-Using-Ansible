@@ -1,0 +1,9 @@
+ec2-instance_01 ansible_host=3.137.174.222 ansible_user=ec2-user ansible_ssh_private_key_file=/home/gaurav/Downloads/ansible_lab_key.pem
+[aws]
+ec2-instance_02 ansible_host=18.189.145.152 ansible_user=ubuntu ansible_ssh_private_key_file=/home/gaurav/Downloads/Gaurav_Test.pem
+[aws1]
+ec2-instance_03 ansible_host=3.144.113.254 ansible_user=ubuntu ansible_ssh_private_key_file=/home/gaurav/Downloads/Gaurav_Test.pem
+
+
+
+
